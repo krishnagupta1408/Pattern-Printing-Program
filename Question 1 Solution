@@ -1,0 +1,40 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+int i,j,k,p;
+int n=7;
+for(i=1;i<n;++i)
+{
+	for(j=1;j<i;j++)
+	{
+		cout<<" ";
+	}
+	p=i;
+	for(k=n;k>=i;--k)
+	{
+		cout<<p++<<" ";
+	}
+	cout<<endl;
+}
+int x=n;
+for(i=1;i<=n;++i)
+{
+	for(j=1;j<=n-i;++j)
+	{
+		cout<<" ";
+	}
+	
+	p=x;
+	for(k=1;k<=i;++k)
+	{
+		cout<<p++<<" ";
+	}
+	x--;
+	cout<<endl;
+}
+  
+  return 0;
+}
