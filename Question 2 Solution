@@ -1,0 +1,44 @@
+#include <iostream>
+#include <vector>
+#include <string>
+#include <algorithm>
+
+using namespace std;
+
+int main()
+{
+string a="XYYZXZYZXXYZ";
+string b="XYZ";
+int index;
+
+vector<string>s;
+do{
+	s.push_back(b);
+}while(next_permutation(b.begin(),b.end()));
+
+
+
+for(int k=0;k<s.size();++k)
+{
+	string x=s[k];
+	int j=0;
+	for(int i=0;i<a.size();++i)
+	{
+		if(a[i]==x[j] && a[i+1]==x[j+1] && a[i+2]==x[j+2])
+			cout<<"Substring '"<<x<<"' present at index "<<i<<endl;
+	}
+}
+
+
+//     OR
+//For finding unique substring.
+// for(int i=0;i<s.size();++i)
+// {
+// 		string x=s[i];
+// 		index=a.find(x);
+// 		if(index!=string::npos)
+// 			cout<<"Substring '"<<x<<"' present at index "<<index<<endl;
+// }
+
+  return 0;
+}
